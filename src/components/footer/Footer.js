@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, Link, Flex, useColorMode, Divider, Text } from "@chakra-ui/core"
+import { Box, Link, Flex, Divider, Text } from "@chakra-ui/core"
 
 const Footer = () => {
   return (
@@ -10,15 +10,14 @@ const Footer = () => {
           <Link href="/" fontSize="xl" fontWeight="normal">
             №
           </Link>
-          <div>
-            <Text fontSize={["sm", "md"]} isExternal>
-              Made with <Link href="https://www.gatsbyjs.org">Gatsby</Link> &{" "}
-              <Link href="https://chakra-ui.com">Chakra-UI</Link>
-              {/* <Icon name="arrow-forward" /> */}
-            </Text>
-          </div>
-
-          {/* <IconButton as="a" icon={FaTwitter} fontSize="sm" size="lg" /> */}
+          <Flex direction="row">
+            <Link isExternal>
+              <Text display="block">Twitter</Text>
+            </Link>
+            <Link isExternal ml={12}>
+              <Text display="block">Github</Text>
+            </Link>
+          </Flex>
         </Flex>
       </Box>
     </div>

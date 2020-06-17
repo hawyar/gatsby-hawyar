@@ -1,8 +1,6 @@
 import React from "react"
-import { Heading, Text, Box, Button, Link, useColorMode } from "@chakra-ui/core"
+import { Heading, Text, Box, Button, Link } from "@chakra-ui/core"
 const Hero = () => {
-  const { colorMode, toggleColorMode } = useColorMode()
-
   return (
     <div>
       <Box
@@ -26,14 +24,7 @@ const Hero = () => {
           adding rich data visualizations, form components for adding email
           signups, styled portions of content like pullquotes
         </Text>
-        <Button
-          as="a"
-          href="/"
-          mt={12}
-          size="lg"
-          fontSize="md"
-          color={colorMode === "light" ? "" : ""}
-        >
+        <Button mt={12} size="lg" fontSize="md">
           {" "}
           Get in touch
         </Button>

@@ -27,42 +27,25 @@ module.exports = {
         crossOrigin: `use-credentials`,
       },
     },
+
+    //mdx
+
+    `gatsby-plugin-mdx`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages`,
+        name: `blog`,
+        path: `${__dirname}/src/pages/blog`,
       },
     },
 
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/pages`,
-      },
-    },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    {
-      resolve: `gatsby-plugin-mdx`,
-      option: {
-        extensions: [`.md`, `.mdx`],
-        gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            option: {
-              maxWidth: 1200,
-            },
-          },
-        ],
-      },
-    },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `roboto mono`,
+          `Inter`,
           `muli\:400,400i,700,700i`, // you can also specify font weights and styles
         ],
         display: "swap",

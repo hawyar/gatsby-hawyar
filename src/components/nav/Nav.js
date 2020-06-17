@@ -17,12 +17,11 @@ const Nav = () => {
           <Link href="/" fontSize="xl" fontWeight="normal">
             №
           </Link>
-
           <div>
-            <Link fontSize="md" href="https://chakra-ui.com" isExternal>
+            <Link fontSize="md" href="/blog/all">
               Blog
             </Link>
-            <Link ml={12} fontSize="md" href="https://chakra-ui.com" isExternal>
+            <Link ml={12} fontSize="md" href="/About">
               About
             </Link>
           </div>
