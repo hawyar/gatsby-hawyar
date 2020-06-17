@@ -18,7 +18,7 @@ const Projects = () => {
     {
       name: " Pefromant animations in Reat using GSAP & Power4",
       description:
-        "Gatsby’s rich data plugin ecosystem lets you build sites with the data you want — from one or many sources: Pull data from headless CMSs",
+        "Gatsby’s data plugin ecosystem lets you build sites with the data you want — from one or many sources: Pull data from headless CMSs",
       link: "/",
     },
   ]
