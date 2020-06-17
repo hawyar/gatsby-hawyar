@@ -23,11 +23,8 @@ const Footer = () => {
           </Link>
           <div>
             <Text fontSize={["sm", "md"]} isExternal>
-              Made with{" "}
-              <Link href="https://www.gatsbyjs.org/docs/add-404-page/">
-                Gatsby
-              </Link>{" "}
-              & <Link href="https://chakra-ui.com">Chakra-UI</Link>
+              Made with <Link href="https://www.gatsbyjs.org">Gatsby</Link> &{" "}
+              <Link href="https://chakra-ui.com">Chakra-UI</Link>
               {/* <Icon name="arrow-forward" /> */}
             </Text>
           </div>
