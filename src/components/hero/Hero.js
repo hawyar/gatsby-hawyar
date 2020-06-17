@@ -25,7 +25,7 @@ const Hero = () => {
           signups, styled portions of content like pullquotes
         </Text>
 
-        <Button as="a" href="/" mt={12} fontSize="sm" size="lg">
+        <Button as="a" href="/" mt={12} color="inherit" size="lg">
           {" "}
           Get in touch
         </Button>
