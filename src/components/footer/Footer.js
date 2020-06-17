@@ -1,7 +1,6 @@
 import React from "react"
-import { Box, Link, Flex, Divider, Text } from "@chakra-ui/core"
-
-const Footer = () => {
+import { Box, Link, Flex, useColorMode, Divider } from "@chakra-ui/core"
+const Nav = () => {
   return (
     <div>
       <Box py={6}>
@@ -10,18 +9,18 @@ const Footer = () => {
           <Link href="/" fontSize="xl" fontWeight="normal">
             №
           </Link>
-          <Flex direction="row">
-            <Link isExternal>
-              <Text display="block">Twitter</Text>
+          <div>
+            <Link fontSize="md" href="/blog/all">
+              Blog
             </Link>
-            <Link isExternal ml={12}>
-              <Text display="block">Github</Text>
+            <Link ml={12} fontSize="md" href="/About">
+              About
             </Link>
-          </Flex>
+          </div>
         </Flex>
       </Box>
     </div>
   )
 }
 
-export default Footer
+export default Nav

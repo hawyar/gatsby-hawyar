@@ -1,5 +1,4 @@
 import React from "react"
-
 function BlogLayout({ children, pageContext }) {
   const { title, author, date } = pageContext.frontmatter
 
@@ -15,7 +14,7 @@ function BlogLayout({ children, pageContext }) {
           <time>Date: {date}</time>
         </header>
         {children}
-      </article>
+      </article>{" "}
     </>
   )
 }
