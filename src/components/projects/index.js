@@ -1,5 +1,5 @@
 import React from "react"
-import { Heading, Box, Link, Flex, Text, Grid, Icon } from "@chakra-ui/core"
+import { Heading, Box, Link, Flex, Text, Grid } from "@chakra-ui/core"
 import { FiEdit } from "react-icons/fi"
 const Projects = () => {
   const blogPosts = [

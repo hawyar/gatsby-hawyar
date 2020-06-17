@@ -1,18 +1,7 @@
 import React from "react"
-import {
-  Box,
-  Link,
-  Flex,
-  useColorMode,
-  Divider,
-  Icon,
-  Text,
-  IconButton,
-} from "@chakra-ui/core"
-import { FaTwitter } from "react-icons/fa"
-const Footer = () => {
-  const { colorMode, toggleColorMode } = useColorMode()
+import { Box, Link, Flex, useColorMode, Divider, Text } from "@chakra-ui/core"
 
+const Footer = () => {
   return (
     <div>
       <Box py={6}>

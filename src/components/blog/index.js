@@ -1,6 +1,6 @@
 import React from "react"
-import MDXComp from "./index.mdx"
-import { Heading, Box, Link, Flex, Text, Grid, Icon } from "@chakra-ui/core"
+// import MDXComp from "./index.mdx"
+import { Heading, Box, Link, Flex, Text, Grid } from "@chakra-ui/core"
 import { FiFeather } from "react-icons/fi"
 const Projects = () => {
   const projects = [
