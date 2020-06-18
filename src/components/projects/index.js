@@ -28,11 +28,11 @@ const Projects = () => {
         <Flex align="center" justify="space-between" mb={[12, 8]}>
           <Flex>
             <Box as={FiEdit} size={5} mr={3} />
-            <Heading as="h3" fontSize="lg" color="gray.400">
+            <Heading as="h3" fontSize="lg" color="gray.700">
               Projects
             </Heading>
           </Flex>
-          <Text as="h3" fontSize="md" color="gray.400">
+          <Text as="h3" fontSize="md" color="gray.700">
             All Projects
           </Text>
         </Flex>
