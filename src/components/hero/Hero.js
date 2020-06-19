@@ -1,6 +1,7 @@
 import React from "react"
 import { Heading, Text, Box, Button, Link } from "@chakra-ui/core"
 import TextLoop from "react-text-loop"
+import { LinkWrapper } from "../utils/index"
 const Hero = () => {
   const heroTextLoop = [
     {
@@ -49,11 +50,11 @@ const Hero = () => {
         <Heading letterSpacing="tight">
           Your favorite Software Engineer currently
         </Heading>
-        <TextLoop masked={true}>
+        <TextLoop>
           {heroTextLoop.map(el => {
             return (
               <Link key={el} href={el.link} isExternal color={el.color}>
-                <Heading letterSpacing="tight">{el.text}</Heading>
+                <span>{el.text}</span>
               </Link>
             )
           })}
@@ -64,15 +65,7 @@ const Hero = () => {
           adding rich data visualizations, form components for adding email
           signups, styled portions of content like pullquotes
         </Text>
-        <Button
-          mt={12}
-          size="lg"
-          fontSize="md"
-          bg="gray.700"
-          color="gray.50"
-          width={["100%", "auto"]}
-        >
-          {" "}
+        <Button mt={12} size="lg" fontSize="md" bg="gray.700" color="gray.50">
           Get in touch
         </Button>
       </Box>

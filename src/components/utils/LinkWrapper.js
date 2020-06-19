@@ -1,0 +1,9 @@
+import React from "react"
+import { Link as GatsbyLink } from "gatsby"
+import { Link } from "@chakra-ui/core"
+
+export const LinkWrapper = ({ children, to }) => (
+  <Link to={to} as={GatsbyLink}>
+    {children}
+  </Link>
+)
