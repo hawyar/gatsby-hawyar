@@ -8,7 +8,7 @@ My personal website built using Gatsby, styled with Chakra-UI, and deployed to N
 
 ### Styling
 
-I switched from [styled-compoenets](https://styled-components.com/) to [Chakra-UI](https://chakra-ui.com/). Although I love styled-compoenets and how far you can go with them but for a simple site Chakra-UI get the job done.
+I switched from [styled-components](https://styled-components.com/) to [Chakra-UI](https://chakra-ui.com/). Although I love styled-compoenets and how far you can go with them but for a simple site Chakra-UI get the job done.
 
 ### Styling
 
