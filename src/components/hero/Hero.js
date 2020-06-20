@@ -55,7 +55,7 @@ const Hero = () => {
               // <Link key={el} href={el.link} isExternal color={el.color}>
               <Text
                 letterSpacing="tight"
-                fontSize="1.875rem"
+                fontSize={["1.875rem", "2.25rem"]}
                 fontWeight="700"
                 color={el.color}
               >
