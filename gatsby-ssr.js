@@ -7,13 +7,13 @@ const {
   CSSReset,
 } = require("@chakra-ui/core")
 
-const customTheme = require("./src/theme/Theme")
+// const customTheme = require("./")
 
 exports.wrapPageElement = ({ element, props }) => {
   // props provide same data to Layout as Page element will get
   // including location, data, etc - you don't need to pass it
   return (
-    <ThemeProvider theme={customTheme}>
+    <ThemeProvider theme={theme}>
       <CSSReset />
       {element}
     </ThemeProvider>
