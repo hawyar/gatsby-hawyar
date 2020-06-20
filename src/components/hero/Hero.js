@@ -47,24 +47,31 @@ const Hero = () => {
         ]}
       >
         <Heading letterSpacing="tight">
-          Your favorite Software Engineer currently
+          Your favorite Software Engineer currently -
         </Heading>
         <TextLoop>
           {heroTextLoop.map(el => {
             return (
-              <Link key={el} href={el.link} isExternal color={el.color}>
-                <span>{el.text}</span>
-              </Link>
+              // <Link key={el} href={el.link} isExternal color={el.color}>
+              <Text
+                letterSpacing="tight"
+                fontSize="1.875rem"
+                fontWeight="700"
+                color={el.color}
+              >
+                {el.text}
+              </Text>
+              // </Link>
             )
           })}
         </TextLoop>
 
-        <Text mt={6} width={["100%", "85%"]}>
+        <Text mt={6} mb={12} width={["100%", "85%"]}>
           Use cases for external libraries could be charting libraries for
           adding rich data visualizations, form components for adding email
           signups, styled portions of content like pullquotes
         </Text>
-        <Button mt={12} size="lg" fontSize="md" bg="gray.700" color="gray.50">
+        <Button size="lg" fontSize="1rem" bg="gray.300" color="gray.700">
           Get in touch
         </Button>
       </Box>
