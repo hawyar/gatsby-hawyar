@@ -1,7 +1,6 @@
 import React from "react"
 import { Heading, Text, Box, Button, Link } from "@chakra-ui/core"
 import TextLoop from "react-text-loop"
-import { LinkWrapper } from "../utils/index"
 const Hero = () => {
   const heroTextLoop = [
     {

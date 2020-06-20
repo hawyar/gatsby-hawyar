@@ -4,7 +4,7 @@ import React from "react"
 const Four0Four = () => {
   return (
     <div>
-      <p>Four'O Four</p>
+      <p>Four' Four</p>
     </div>
   )
 }
