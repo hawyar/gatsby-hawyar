@@ -24,7 +24,7 @@ const Projects = () => {
   ]
   return (
     <div>
-      <Box mt={[32, 48]} mb={[32, 48]}>
+      <Box id="projects" mt={[32, 48]} mb={[32, 48]}>
         <Flex align="center" justify="space-between" mb={[12, 8]}>
           <Flex>
             <Box as={FiEdit} size={5} mr={3} />

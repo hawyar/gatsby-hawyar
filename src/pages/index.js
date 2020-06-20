@@ -3,7 +3,7 @@ import Layout from "../components/layout/Layout"
 import Hero from "../components/hero/Hero"
 import Projects from "../components/projects/index"
 import ContactForm from "../components/contact-form/ContactForm"
-import customTheme from "../theme/theme"
+import customTheme from "../theme/Theme"
 import { ThemeProvider } from "@chakra-ui/core"
 require("typeface-cooper-hewitt")
 
