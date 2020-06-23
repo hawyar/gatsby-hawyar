@@ -16,10 +16,10 @@ const Projects = () => {
       link: "/",
     },
     {
-      name: " Pefromant animations in Reat using GSAP & Power4",
+      name: "Digital SaaS Application for Kurdistan workforce",
       description:
         "Gatsby’s data plugin ecosystem lets you build sites with the data you want — from one or many sources: Pull data from headless CMSs",
-      link: "/",
+      link: "/blog/digital-saas-kurdistan",
     },
   ]
   return (

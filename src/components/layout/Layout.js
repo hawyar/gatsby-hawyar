@@ -9,7 +9,6 @@ const Layout = ({ children }) => {
       minHeight="100vh"
       position="relative"
       direction="column"
-      x
       px={[8, 16, 24, 24]}
       display="flex"
       flexDirection="column"

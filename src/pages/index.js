@@ -3,7 +3,6 @@ import Layout from "../components/layout/Layout"
 import Hero from "../components/hero/Hero"
 import Projects from "../components/projects/index"
 import ContactForm from "../components/contact-form/ContactForm"
-require("typeface-cooper-hewitt")
 
 export default function Home() {
   return (

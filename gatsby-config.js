@@ -22,7 +22,7 @@ module.exports = {
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: "standalone",
-        icon: "src/images/favicon.png", // This path is relative to the root of the site.
+        icon: "src/favicon/favicon.png", // This path is relative to the root of the site.
         // An optional attribute which provides support for CORS check.
         // If you do not provide a crossOrigin option, it will skip CORS for manifest.
         // Any invalid keyword or empty string defaults to `anonymous`
@@ -30,28 +30,20 @@ module.exports = {
       },
     },
 
-    //mdx
-
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 1200,
-            },
-          },
-        ],
-        extensions: [`.mdx`, `.md`],
+        defaultLayouts: {
+          default: require.resolve("./src/components/layout/Layout.js"),
+        },
       },
     },
 
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages`,
+        name: `images`,
+        path: `${__dirname}/src/images`,
       },
     },
 
@@ -71,7 +63,7 @@ module.exports = {
       resolve: "gatsby-plugin-chakra-ui",
       options: {
         isResettingCSS: true,
-        isUsingColorMode: false,
+        isUsingColorMode: true,
       },
     },
   ],

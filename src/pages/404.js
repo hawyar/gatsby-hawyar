@@ -1,5 +1,4 @@
 import React from "react"
-
 // finish 404 page design
 const Four0Four = () => {
   return (

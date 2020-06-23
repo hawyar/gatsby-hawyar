@@ -1,22 +1,36 @@
 import React from "react"
-import { Box, Flex, Divider, Link } from "@chakra-ui/core"
-import { Link as GatsbyLink } from "gatsby"
+import {
+  Box,
+  Link,
+  Flex,
+  useColorMode,
+  IconButton,
+  Divider,
+} from "@chakra-ui/core"
 const Nav = () => {
+  const { colorMode, toggleColorMode } = useColorMode()
+
   return (
     <div>
       <Box py={6}>
         <Flex justify="space-between" align="center">
-          <Link as={GatsbyLink} to="/">
+          <Link href="/" fontSize="xl" fontWeight="normal">
             №
           </Link>
-          <Box>
-            <Link mr={12} as={GatsbyLink} to="/blog/all">
+          <div>
+            <Link fontSize="md" href="/blog/all">
               Blog
             </Link>
-            <Link as={GatsbyLink} to="/About">
+            <Link ml={12} fontSize="md" href="/About">
               About
             </Link>
-          </Box>
+          </div>
+          <IconButton
+            bg="transparent"
+            onClick={toggleColorMode}
+            aria-label="Color mode"
+            icon={colorMode === "light" ? "moon" : "sun"}
+          />
         </Flex>
         <Divider mt={4} />
       </Box>
