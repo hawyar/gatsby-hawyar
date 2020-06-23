@@ -1,5 +1,5 @@
 import React from "react"
-import { Heading, Text, Box, Icon, Button, Link } from "@chakra-ui/core"
+import { Heading, Text, Box, Button, Link } from "@chakra-ui/core"
 import { LinkWrapper } from "../utils/LinkWrapper"
 
 // import { useSiteMetadata } from "../../hooks/useSiteMetadata"
@@ -23,15 +23,13 @@ const Hero = () => {
         </Heading>
 
         <Text mt={6} mb={12} width={["100%", "85%"]}>
-          Use cases for external libraries could be charting libraries for
-          adding rich data visualizations, form components for adding email
-          signups, styled portions of content like pullquotes
+          Hey, I am Hawyar - Software Engineer living in beautiful Fort Wayne.
         </Text>
       </Box>
 
       <LinkWrapper to="/">
         <Button size="lg" fontSize="md">
-          Get in touch <Icon marginLeft={3} name="arrow-forward" />
+          Get in touch
         </Button>
       </LinkWrapper>
     </div>

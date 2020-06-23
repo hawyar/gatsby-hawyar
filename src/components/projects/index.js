@@ -16,7 +16,7 @@ const Projects = () => {
       link: "/",
     },
     {
-      name: "Digital SaaS Application for Kurdistan workforce",
+      name: "A digital platform for better job opportunities in Kurdistan",
       description:
         "Gatsby’s data plugin ecosystem lets you build sites with the data you want — from one or many sources: Pull data from headless CMSs",
       link: "/blog/digital-saas-kurdistan",
@@ -28,11 +28,11 @@ const Projects = () => {
         <Flex align="center" justify="space-between" mb={[12, 8]}>
           <Flex>
             <Box as={FiEdit} size={5} mr={3} />
-            <Heading as="h3" fontSize="lg" color="gray.700">
+            <Heading as="h3" fontSize="lg">
               Projects
             </Heading>
           </Flex>
-          <Text as="h3" fontSize="md" color="gray.700">
+          <Text as="h3" fontSize="md">
             All Projects
           </Text>
         </Flex>
