@@ -7,12 +7,105 @@ excerpt: Building a digital platform to allow users apply and manage their job a
 published: true
 ---
 
-# This is the header
+# The Great - Gatsby Framework
 
-### Work
+Column: Jun 27, 2020 12:02 AM
+Posted: No
+Status: Draft
+Tags: API, Node
 
-**some cool mdx**
+> Keep in mind, you are still in React land, Gatsby is merely an opinionated envrioemnt which
 
-```js
-const harry = "hello"
+- Node.js (npm or yarn)
+- Canvas Account (API key)
+
+### Environment Setup
+
+I assume you have Node.js installed if not make sure you download the latest stable version [here](https://nodejs.org/en/download/). For this project, I will be using yarn - a node package manager similar to npm (which comes with Node.js) but faster. If you prefer working with npm feel free to skip this step.
+
+> Both package managers operate the same however, I personally prefer yarn and it includes emojis so can't complain 🌈.
+
+I am going to work in Documents and save all the files in there. Feel free to store yours where works best for you.
+
+In Documents, lets create the a directory for our project.
+
+```bash
+cd Documents
+mkdir <project-name>
+```
+
+I called mine **air-canvas**
+
+Next, move into the newly created directory and initialize a new project. If you want to skip the questions and leave them as default then append -y to the end of the following command
+
+```bash
+yarn init
+## To skip questions and leave them as default
+## yarn init -y
+```
+
+To leave the default answer just press Enter else you can specify and change these settings later.
+
+```bash
+{
+  "name": "air-canvas",
+  "version": "1.0.0",
+  "description": "A mashup of Airtable and canvas lms api",
+  "main": "index.js",
+  "author": "hawyar",
+  "license": "MIT"
+}
+```
+
+It is important to know the entry file to out Node app which in our case is index.js (many prefer to call it server.js). Make sure you specify the entry file correctly.
+
+Add the scripts option in our existing package.json
+
+```bash
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  }
+```
+
+Now package.json should include the following
+
+```bash
+{
+  "name": "air-canvas",
+  "version": "1.0.0",
+  "description": "A mashup of Airtable and canvas lms api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "author": "hawyar",
+  "license": "MIT"
+}
+```
+
+Head over to your project folder and create a src directory and out entry file index.js which we specified in the package.json
+
+```bash
+mkdir src
+cd src
+touch index.js
+```
+
+Let's test index.js to see if it works.
+
+```jsx
+console.log("Node is cool")
+```
+
+That will create a package.json file that holds our dependencies information which makes it easy to share.
+
+Let's create our back-end server using the [express](https://expressjs.com/) framework to create our API.
+
+First install Gatsby on your computer using the gatsby-cli
+
+```bash
+yarn global add gatsby-cli
+## npm install -g gatsby-cli
 ```

@@ -1,8 +1,12 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/layout/Layout"
-const BlogPostTemplate = ({ data, pageContext }) => {
+import { Heading, Text } from "@chakra-ui/core"
+
+// access pageContext
+
+const BlogPostTemplate = ({ data }) => {
   const { title, date } = data.mdx.frontmatter
   const { body } = data.mdx
 
@@ -12,9 +16,12 @@ const BlogPostTemplate = ({ data, pageContext }) => {
   return (
     <div>
       <Layout>
-        <h1>{title}</h1>
-        <p> {date}</p>
-        <MDXRenderer>{body}</MDXRenderer>
+        <Heading fontSize="4xl" mb={2}>
+          {title}
+        </Heading>
+        <Text>{date}</Text>
+
+        {/* <MDXRenderer>{body}</MDXRenderer> */}
 
         {/* pagination implement soon */}
         {/* <div style={{ bg: "purple" }}>
