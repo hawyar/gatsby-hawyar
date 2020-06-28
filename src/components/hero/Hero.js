@@ -1,5 +1,5 @@
 import React from "react"
-import { Heading, Text, Box, Button, Link } from "@chakra-ui/core"
+import { Heading, Box, Button } from "@chakra-ui/core"
 import { LinkWrapper } from "../utils/LinkWrapper"
 
 // import { useSiteMetadata } from "../../hooks/useSiteMetadata"
@@ -14,21 +14,26 @@ const Hero = () => {
           "100%", // base
           "65%", // 480px upwards
           "55%", // 768px upwards
-          "45%", // 992px upwards
+          "35%", // 992px upwards
         ]}
       >
-        <Heading letterSpacing="tight">
-          Experienced Software Engineer - currently busy building{" "}
-          <Link color="gray.500">Norem</Link>
+        <Heading as="h1" letterSpacing="tight">
+          Hi, I'm Hawyar
+          <Heading
+            as="p"
+            fontWeight="500"
+            mt={2}
+            fontSize="3xl"
+            color="gray.500"
+          >
+            {" "}
+            Experienced Software Engineer, obsessed with design systems
+          </Heading>
         </Heading>
-
-        <Text mt={6} mb={12} width={["100%", "85%"]}>
-          Hey, I am Hawyar - Software Engineer living in beautiful Fort Wayne.
-        </Text>
       </Box>
 
       <LinkWrapper to="/">
-        <Button size="lg" fontSize="md">
+        <Button size="lg" fontSize="md" mt={10}>
           Get in touch
         </Button>
       </LinkWrapper>

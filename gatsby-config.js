@@ -2,7 +2,8 @@ require("dotenv").config()
 
 module.exports = {
   siteMetadata: {
-    title: `Hawyar farooq`,
+    title: `Hawyar Farooq`,
+    author: `Hawyar`,
     siteUrl: `https://www.hawyar.com`,
     titleTemplate: "%s · The Real Hero",
     description: `Hawyar Farooq - Software Engineer`,
@@ -33,17 +34,24 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        defaultLayouts: {
-          default: require.resolve("./src/components/layout/Layout.js"),
-        },
+        extensions: [".md", ".mdx"],
+        plugins: [`gatsby-remark-images`],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
       },
     },
 
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `posts`,
+        path: `${__dirname}/content/blog/`,
       },
     },
 
@@ -52,10 +60,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `Inter`,
-          `muli\:400,400i,700,700i`, // you can also specify font weights and styles
-        ],
+        fonts: [`Inter`],
         display: "swap",
       },
     },

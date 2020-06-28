@@ -1,27 +1,29 @@
 import React from "react"
 import { Heading, Box, Link, Flex, Text, Grid } from "@chakra-ui/core"
 import { FiEdit } from "react-icons/fi"
+
+const projects = [
+  {
+    name: "Pefromant animations in Reat using GSAP & Power4",
+    description:
+      "Gatsby’s rich data plugin ecosystem lets you build sites with the data you want — from one or many sources: Pull data from headless CMSs",
+    link: "/",
+  },
+  {
+    name: "Pefromant fdsdfsdf in Reat using GSAP & Power4",
+    description:
+      "Gatsby’s rich data plugin ecosystem lets you build sites with the data you want — from one or many sources: Pull data from headless CMSs",
+    link: "/",
+  },
+  {
+    name: "A digital platform for better job opportunities in Kurdistan",
+    description:
+      "Gatsby’s data plugin ecosystem lets you build sites with the data you want — from one or many sources: Pull data from headless CMSs",
+    link: "/blog/digital-saas-kurdistan",
+  },
+]
+
 const Projects = () => {
-  const blogPosts = [
-    {
-      name: " Pefromant animations in Reat using GSAP & Power4",
-      description:
-        "Gatsby’s rich data plugin ecosystem lets you build sites with the data you want — from one or many sources: Pull data from headless CMSs",
-      link: "/",
-    },
-    {
-      name: " Pefromant animations in Reat using GSAP & Power4",
-      description:
-        "Gatsby’s rich data plugin ecosystem lets you build sites with the data you want — from one or many sources: Pull data from headless CMSs",
-      link: "/",
-    },
-    {
-      name: "A digital platform for better job opportunities in Kurdistan",
-      description:
-        "Gatsby’s data plugin ecosystem lets you build sites with the data you want — from one or many sources: Pull data from headless CMSs",
-      link: "/blog/digital-saas-kurdistan",
-    },
-  ]
   return (
     <div>
       <Box id="projects" mt={[32, 48]} mb={[32, 48]}>
@@ -41,9 +43,9 @@ const Projects = () => {
           columnGap={16}
           rowGap={16}
         >
-          {blogPosts.map(el => {
+          {projects.map(el => {
             return (
-              <>
+              <div key={el.name}>
                 <Box>
                   <Link
                     href={el.link}
@@ -52,7 +54,6 @@ const Projects = () => {
                       textDecoration: "underline",
                     }}
                     lineHeight="none"
-                    key={el.name}
                     fontSize="2xl"
                     fontWeight="bold"
                   >
@@ -61,7 +62,7 @@ const Projects = () => {
 
                   <Text mt={3}>{el.description}</Text>
                 </Box>
-              </>
+              </div>
             )
           })}
         </Grid>

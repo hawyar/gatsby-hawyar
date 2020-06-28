@@ -7,21 +7,21 @@ const Footer = () => {
       <Box py={6}>
         <Divider mb={4} />
         <Flex justify="space-between" align="center">
-          <Link as={GatsbyLink} to="/" fontSize="xl" fontWeight="normal">
-            №
+          <Link as={GatsbyLink} to="/" fontSize="md" fontWeight="normal">
+            Copyright © 2020, Hawyar
           </Link>
-          <div>
-            Made with{" "}
+          <div style={{ textAlign: "right" }}>
+            Powered by{" "}
             <Link fontSize="md" href="gatsbyjs.org">
               Gatsby
             </Link>
             ,{" "}
             <Link fontSize="md" href="https://chakra-ui.com/">
-              Chakra-UI
+              chakra-ui
             </Link>
             ,{" "}
-            <Link fontSize="md" href="https://vercel.com/home">
-              Vercel
+            <Link fontSize="md" href="https://netlify.com/">
+              Netlify
             </Link>
           </div>
         </Flex>

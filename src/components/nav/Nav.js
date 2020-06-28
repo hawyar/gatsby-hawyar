@@ -14,14 +14,11 @@ const Nav = () => {
     <div>
       <Box py={6}>
         <Flex justify="space-between" align="center">
-          <Link href="/" fontSize="xl" fontWeight="normal">
-            №
-          </Link>
           <div>
-            <Link fontSize="md" href="/blog/all">
-              Blog
+            <Link fontSize="md" href="/">
+              GitHub
             </Link>
-            <Link ml={12} fontSize="md" href="/About">
+            <Link ml={12} fontSize="md" href="/about">
               About
             </Link>
           </div>
