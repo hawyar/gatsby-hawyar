@@ -12,7 +12,7 @@ const Footer = () => {
           </Link>
           <div style={{ textAlign: "right" }}>
             Powered by{" "}
-            <Link fontSize="md" href="gatsbyjs.org">
+            <Link fontSize="md" href="https://www.gatsbyjs.org/">
               Gatsby
             </Link>
             ,{" "}

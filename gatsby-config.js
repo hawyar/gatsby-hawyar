@@ -30,11 +30,10 @@ module.exports = {
         crossOrigin: `use-credentials`,
       },
     },
-
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        extensions: [".md", ".mdx"],
+        extensions: [".mdx"],
         plugins: [`gatsby-remark-images`],
         gatsbyRemarkPlugins: [
           {
@@ -72,7 +71,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Inter`],
+        fonts: [`Rubik`],
         display: "swap",
       },
     },

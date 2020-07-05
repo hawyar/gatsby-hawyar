@@ -1,6 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
-
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout/Layout"
 import { Heading, Image, Box, Text } from "@chakra-ui/core"
 
@@ -12,18 +11,7 @@ const BlogPostTemplate = ({
   return (
     <div>
       <Layout>
-        <Box
-          display="flex"
-          flexDirection="column"
-          overflow="hidden"
-          // responsive box
-          // width={[
-          //   "100%", // base
-          //   "65%", // 480px upwards
-          //   "55%", // 768px upwards
-          //   "55%", // 992px upwards
-          // ]}
-        >
+        <Box display="flex" flexDirection="column" overflow="hidden">
           <Box
             rounded="lg"
             width={{
