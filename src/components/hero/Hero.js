@@ -1,6 +1,6 @@
 import React from "react"
-import { Heading, Box, Button } from "@chakra-ui/core"
-import { LinkWrapper } from "../utils/LinkWrapper"
+import { Heading, Box, Image, Text } from "@chakra-ui/core"
+import { LinkWrapper } from "../../utils/LinkWrapper"
 
 // import { useSiteMetadata } from "../../hooks/useSiteMetadata"
 
@@ -8,35 +8,40 @@ const Hero = () => {
   return (
     <div>
       <Box
+        display="flex"
+        flexDirection="column"
         overflow="hidden"
-        // grow and center ** reuse **
-        width={[
-          "100%", // base
-          "65%", // 480px upwards
-          "55%", // 768px upwards
-          "35%", // 992px upwards
-        ]}
+        // responsive box
+        // width={[
+        //   "100%", // base
+        //   "65%", // 480px upwards
+        //   "55%", // 768px upwards
+        //   "55%", // 992px upwards
+        // ]}
       >
-        <Heading as="h1" letterSpacing="tight">
-          Hi, I'm Hawyar
-          <Heading
-            as="p"
-            fontWeight="500"
-            mt={2}
-            fontSize="3xl"
-            color="gray.500"
-          >
-            {" "}
-            Experienced Software Engineer, obsessed with design systems
-          </Heading>
+        <Box
+          rounded="lg"
+          width={{ xs: "100%", sm: "100%", md: "100%", lg: "100%", xl: "100%" }}
+          height="400px"
+        >
+          <Image
+            rounded="lg"
+            width={{
+              xs: "100%",
+              sm: "100%",
+              md: "100%",
+              lg: "100%",
+              xl: "100%",
+            }}
+            height="100%"
+            src="https://cdn.dribbble.com/users/2146089/screenshots/12757149/media/fa3bbd09a17090acc55cd3b65e43baa6.png"
+            objectFit="cover"
+          />
+        </Box>
+        <Heading mt="12" fontSize="4xl">
+          Consistent design systems using theme-ui across UX edge points
         </Heading>
       </Box>
-
-      <LinkWrapper to="/">
-        <Button size="lg" fontSize="md" mt={10}>
-          Get in touch
-        </Button>
-      </LinkWrapper>
     </div>
   )
 }

@@ -9,14 +9,12 @@ const Layout = ({ children }) => {
       minHeight="100vh"
       position="relative"
       direction="column"
-      px={[8, 16, 24, 24]}
+      px={[8, 16, 24, "275px"]}
       display="flex"
       flexDirection="column"
     >
       <Nav />
-      <Box flex="1 0 auto" mt={[8, 10, 12, 16]}>
-        {children}
-      </Box>
+      <Box flex="1 0 auto">{children}</Box>
       <Box flexShrink="0">
         <Footer />
       </Box>

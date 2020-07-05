@@ -9,19 +9,45 @@ import {
 } from "@chakra-ui/core"
 const Nav = () => {
   const { colorMode, toggleColorMode } = useColorMode()
-
+  const secretLinkMode = { light: "white", dark: "purple.400" }
   return (
     <div>
       <Box py={6}>
         <Flex justify="space-between" align="center">
           <div>
-            <Link fontSize="md" href="/">
-              GitHub
-            </Link>
-            <Link ml={12} fontSize="md" href="/about">
+            <Link
+              fontSize="md"
+              href="/about"
+              p="2"
+              rounded="md"
+              _hover={{ bg: "gray.300", color: "black" }}
+            >
               About
             </Link>
+
+            <Link
+              ml={12}
+              fontSize="md"
+              href="https://github.com/hawyar"
+              _hover={{ bg: "gray.300", color: "black" }}
+              p="2"
+              rounded="md"
+            >
+              GitHub
+            </Link>
+            <Link
+              ml={12}
+              fontSize="md"
+              href="https://github.com/hawyar"
+              _hover={{ bg: "gray.300", color: "black" }}
+              p="2"
+              rounded="md"
+              color={secretLinkMode[colorMode]}
+            >
+              Secret
+            </Link>
           </div>
+
           <IconButton
             bg="transparent"
             onClick={toggleColorMode}

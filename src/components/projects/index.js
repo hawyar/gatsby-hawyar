@@ -38,11 +38,7 @@ const Projects = () => {
             All Projects
           </Text>
         </Flex>
-        <Grid
-          templateColumns={{ sm: "repeat(3, 1fr)" }}
-          columnGap={16}
-          rowGap={16}
-        >
+        <Grid gridTemplateRows="repeat(3, 1fr)" columnGap={16} rowGap={16}>
           {projects.map(el => {
             return (
               <div key={el.name}>
