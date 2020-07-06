@@ -4,7 +4,7 @@ import { FiFeather } from "react-icons/fi"
 import { LinkWrapper } from "../../utils/LinkWrapper"
 import { Link as GatsbyLink } from "gatsby"
 
-const BlogPreview = ({ data }) => {
+const Posts = ({ data }) => {
   return (
     <div>
       <Box id="projects" mt="32" mb={[32, 48]}>
@@ -61,4 +61,4 @@ const BlogPreview = ({ data }) => {
   )
 }
 
-export default BlogPreview
+export default Posts

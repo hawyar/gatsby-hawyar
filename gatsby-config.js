@@ -6,10 +6,13 @@ module.exports = {
   siteMetadata: {
     title: `Hawyar Farooq`,
     author: `Hawyar`,
+    owner: "Hawyar Farooq",
+    url: `https://www.hawyar.com`,
     siteUrl: `https://www.hawyar.com`,
     titleTemplate: "%s · The Real Hero",
-    description: `Hawyar Farooq - Software Engineer`,
+    description: `Hawyar's personal website`,
     twitterUsername: `@HawyarFarooq`,
+    image: `/src/assets/images/selfImg.png`,
   },
 
   plugins: [
@@ -17,9 +20,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Haywra Farooq - Portfolio`,
-        short_name: "Hawyar Farooq",
-        description: `Hawyar Farooq - Portfolio`,
+        name: `Haywra Farooq - Software Engineer`,
+        short_name: "hawyarfarooq",
+        description: `Hawyar's personal website`,
         lang: `en`,
         start_url: "/",
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)

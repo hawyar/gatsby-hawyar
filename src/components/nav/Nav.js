@@ -26,7 +26,7 @@ const Nav = () => {
             </Link>
 
             <Link
-              ml={12}
+              ml={[6, 12]}
               fontSize="md"
               href="https://github.com/hawyar"
               _hover={{ bg: "gray.300", color: "black" }}
@@ -36,7 +36,7 @@ const Nav = () => {
               GitHub
             </Link>
             <Link
-              ml={12}
+              ml={[6, 12]}
               fontSize="md"
               href="https://dribbble.com/Hawyar"
               _hover={{ bg: "gray.300", color: "black" }}

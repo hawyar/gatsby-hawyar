@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, Link, Flex, Divider, Icon } from "@chakra-ui/core"
+import { Box, Link, Flex, Divider } from "@chakra-ui/core"
 import { Link as GatsbyLink } from "gatsby"
 import { FaHeart } from "react-icons/fa"
 const Footer = () => {

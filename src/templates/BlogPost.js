@@ -1,15 +1,18 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout/Layout"
 import { Heading, Image, Box, Text } from "@chakra-ui/core"
-
+import SEO from "../components/seo/seo"
 const BlogPostTemplate = ({
   data: {
     gcms: { post },
   },
 }) => {
+  const seoImage = post.coverImage.url
   return (
     <div>
+      <SEO title={post.title} image={seoImage} description={post.excerpt} />
+
       <Layout>
         <Box display="flex" flexDirection="column" overflow="hidden">
           <Box
@@ -56,6 +59,7 @@ export const pageQuery = graphql`
       post(where: { id: $id }) {
         title
         date
+        excerpt
         content {
           html
           raw

@@ -13,10 +13,10 @@ const About = () => {
             <Box>
               <Text>
                 Hey! I am Hawyar Farooq, a 20 year-old Software Engineer from
-                the beautiful country of Kurdistan. Currently, pursuing a B.S in
-                Software Engineer in the U.S. My programming background is
-                derived from however in the last two years I have branched out
-                to web development mainly developing websites using React js.
+                the beautiful Kurdistan. Currently, pursuing a B.S in Software
+                Engineer in the U.S. My programming background is derived from
+                however in the last two years I have branched out to web
+                development mainly developing websites using React js.
               </Text>
 
               <Text mt={6}>
@@ -41,7 +41,7 @@ const About = () => {
             </Button>
           </Box>
           <Image
-            rounded="sm"
+            rounded="lg"
             height={["auto", "375px"]}
             width="auto"
             src="https://i.ibb.co/MVc80Wq/selfImg.png"

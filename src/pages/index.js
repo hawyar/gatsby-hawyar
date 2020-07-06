@@ -1,9 +1,8 @@
 import React from "react"
-import { graphql, useStaticQuery, Link } from "gatsby"
-import { Heading, Box, PseudoBox, Divider } from "@chakra-ui/core"
+import { Heading, Box, PseudoBox } from "@chakra-ui/core"
 import Layout from "../components/layout/Layout"
-import { Link as GatsbyLink } from "gatsby"
-
+import { Link as GatsbyLink, graphql, useStaticQuery } from "gatsby"
+import SEO from "../components/seo/seo"
 const pageQuery = graphql`
   {
     gcms {
@@ -24,6 +23,7 @@ const Home = () => {
   } = useStaticQuery(pageQuery)
   return (
     <div>
+      <SEO />
       <Layout>
         <Heading fontSize={["2xl", "lg", "xl", "3xl"]}>Writings</Heading>
         <Box mt={6}>
@@ -36,9 +36,15 @@ const Home = () => {
                   <PseudoBox
                     cursor="pointer"
                     transition="0.38s all ease"
-                    _hover={{ bg: "gray.700", color: "white", p: "3" }}
+                    mb={3}
+                    pt="2"
+                    pb="2"
+                    _hover={{
+                      bg: "gray.700",
+                      color: "white",
+                      pl: "3",
+                    }}
                     rounded="lg"
-                    mt={6}
                   >
                     <Heading
                       fontSize={["md", "lg", "xl", "xl"]}
