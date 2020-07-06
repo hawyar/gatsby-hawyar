@@ -18,6 +18,12 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sitemap`,
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-171491775-1",
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Haywra Farooq - Software Engineer`,
@@ -59,7 +65,9 @@ module.exports = {
         fieldName: "gcms",
         // Your API endpoint, available from the dashboard and settings window.
         // You can use this endpoint that features US mountains for now.
-        url: process.env.GCMS_KEY,
+        url:
+          process.env.GCMS_KEY ||
+          "https://api-us-east-1.graphcms.com/v2/ckc9atklc09yk01za058ieq59/master",
       },
     },
 
