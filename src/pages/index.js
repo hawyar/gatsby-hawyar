@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import { Heading, Box, PseudoBox, Divider } from "@chakra-ui/core"
 import Layout from "../components/layout/Layout"
+import { Link as GatsbyLink } from "gatsby"
 
 const pageQuery = graphql`
   {
@@ -24,32 +25,35 @@ const Home = () => {
   return (
     <div>
       <Layout>
-        <Heading fontSize="md">Posts</Heading>
-        <Box mt={12}>
+        <Heading fontSize={["2xl", "lg", "xl", "3xl"]}>Writings</Heading>
+        <Box mt={6}>
           {posts.map(post => {
             const { title, date, slug } = post
 
             return (
               <div>
-                <PseudoBox
-                  // _hover={{ bg: "gray.700", color: "white" }}
-                  rounded="lg"
-                  pb={6}
-                >
-                  <Link
-                    to={`/posts/${slug}`}
-                    fontSize={["md", "lg", "xl", "2xl"]}
+                <Box as={GatsbyLink} to={`/posts/${slug}`}>
+                  <PseudoBox
+                    cursor="pointer"
+                    transition="0.38s all ease"
+                    _hover={{ bg: "gray.700", color: "white", p: "3" }}
+                    rounded="lg"
+                    mt={6}
                   >
-                    {title}
-                  </Link>
+                    <Heading
+                      fontSize={["md", "lg", "xl", "xl"]}
+                      fontWeight="500"
+                    >
+                      {title}
+                    </Heading>
 
-                  <p>{date}</p>
-                </PseudoBox>
+                    <p fontSize="md">{date}</p>
+                  </PseudoBox>
+                </Box>
               </div>
             )
           })}
         </Box>
-        <Divider />
       </Layout>
     </div>
   )

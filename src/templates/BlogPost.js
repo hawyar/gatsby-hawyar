@@ -40,8 +40,8 @@ const BlogPostTemplate = ({
           <Heading mt="12" fontSize="4xl">
             {post.title}
           </Heading>
-          <Text mt="4">{post.date}</Text>
-          <div>{post.content.markdown}</div>
+          <Text mt="2">{post.date}</Text>
+          <Box mt={12}>{post.content.markdown}</Box>
         </Box>
       </Layout>
     </div>

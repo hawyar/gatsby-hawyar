@@ -38,7 +38,7 @@ const Nav = () => {
             <Link
               ml={12}
               fontSize="md"
-              href="https://github.com/hawyar"
+              href="https://dribbble.com/Hawyar"
               _hover={{ bg: "gray.300", color: "black" }}
               p="2"
               rounded="md"

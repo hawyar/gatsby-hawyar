@@ -1,6 +1,7 @@
 import React from "react"
-import { Box, Link, Flex, Divider } from "@chakra-ui/core"
+import { Box, Link, Flex, Divider, Icon } from "@chakra-ui/core"
 import { Link as GatsbyLink } from "gatsby"
+import { FaHeart } from "react-icons/fa"
 const Footer = () => {
   return (
     <div>
@@ -8,22 +9,18 @@ const Footer = () => {
         <Divider mb={4} />
         <Flex justify="space-between" align="center">
           <Link as={GatsbyLink} to="/" fontSize="md" fontWeight="normal">
-            Copyright © 2020, Hawyar
+            Home
           </Link>
-          <div style={{ textAlign: "right" }}>
-            Powered by{" "}
-            <Link fontSize="md" href="https://www.gatsbyjs.org/">
+          <Box
+            style={{ textAlign: "right" }}
+            display="flex"
+            alignItems="center"
+          >
+            Made with <Box as={FaHeart} ml={1} mr={1} /> and
+            <Link fontSize="md" href="https://www.gatsbyjs.org/" ml={1}>
               Gatsby
             </Link>
-            ,{" "}
-            <Link fontSize="md" href="https://chakra-ui.com/">
-              chakra-ui
-            </Link>
-            ,{" "}
-            <Link fontSize="md" href="https://netlify.com/">
-              Netlify
-            </Link>
-          </div>
+          </Box>
         </Flex>
       </Box>
     </div>
