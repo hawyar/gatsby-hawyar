@@ -1,14 +1,17 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout/Layout"
-import { Heading, Image, Box, Text } from "@chakra-ui/core"
+import { Heading, Image, Box, Text, Flex } from "@chakra-ui/core"
 import SEO from "../components/seo/seo"
+
 const BlogPostTemplate = ({
   data: {
     gcms: { post },
   },
+  pageContext: { next, prev },
 }) => {
   const seoImage = post.coverImage.url
+
   return (
     <div>
       <SEO title={post.title} image={seoImage} description={post.excerpt} />
@@ -40,12 +43,33 @@ const BlogPostTemplate = ({
               objectFit="cover"
             />
           </Box>
-          <Heading mt="12" fontSize="4xl">
+          <Heading mt="12" fontSize="5xl" color="ea9a96">
             {post.title}
           </Heading>
-          <Text mt="2">{post.date}</Text>
-          <Box mt={12}>{post.content.markdown}</Box>
+          <Text mt="4">{post.date}</Text>
+          <Box mt={12}>
+            <div
+              dangerouslySetInnerHTML={{ __html: `${post.content.html}` }}
+            ></div>
+          </Box>
         </Box>
+        <Flex mt={20} justify="space-between">
+          <Box>
+            {prev && (
+              <Link to={`/posts/${prev.slug}`} rel="prev" color="brand.700">
+                ← {prev.title}
+              </Link>
+            )}
+          </Box>
+
+          <Box>
+            {next && (
+              <Link to={`/posts/${next.slug}`} rel="next">
+                {next.title} →
+              </Link>
+            )}
+          </Box>
+        </Flex>
       </Layout>
     </div>
   )
@@ -59,6 +83,7 @@ export const pageQuery = graphql`
       post(where: { id: $id }) {
         title
         date
+        slug
         excerpt
         content {
           html

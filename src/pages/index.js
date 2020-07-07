@@ -3,6 +3,7 @@ import { Heading, Box, PseudoBox } from "@chakra-ui/core"
 import Layout from "../components/layout/Layout"
 import { Link as GatsbyLink, graphql, useStaticQuery } from "gatsby"
 import SEO from "../components/seo/seo"
+import Projects from "../components/projects/index"
 const pageQuery = graphql`
   {
     gcms {
@@ -25,14 +26,14 @@ const Home = () => {
     <div>
       <SEO />
       <Layout>
-        <Heading fontSize={["2xl", "lg", "xl", "3xl"]}>Writings</Heading>
+        <Heading fontSize={["2xl", "lg", "xl", "3xl"]}>Blog</Heading>
         <Box mt={6}>
           {posts.map(post => {
             const { title, date, slug } = post
 
             return (
               <div>
-                <Box as={GatsbyLink} to={`/posts/${slug}`}>
+                <Box as={GatsbyLink} to={`/posts/${slug}`} key={slug}>
                   <PseudoBox
                     cursor="pointer"
                     transition="0.38s all ease"
@@ -60,6 +61,7 @@ const Home = () => {
             )
           })}
         </Box>
+        <Projects />
       </Layout>
     </div>
   )

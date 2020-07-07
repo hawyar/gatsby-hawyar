@@ -1,6 +1,5 @@
 import React from "react"
-import { Heading, Box, Link, Flex, Text, Grid } from "@chakra-ui/core"
-import { FiEdit } from "react-icons/fi"
+import { Heading, Box, PseudoBox, Grid } from "@chakra-ui/core"
 
 const projects = [
   {
@@ -26,37 +25,33 @@ const projects = [
 const Projects = () => {
   return (
     <div>
-      <Box id="projects" mt={[32, 48]} mb={[32, 48]}>
-        <Flex align="center" justify="space-between" mb={[12, 8]}>
-          <Flex>
-            <Box as={FiEdit} size={5} mr={3} />
-            <Heading as="h3" fontSize="lg">
-              Projects
-            </Heading>
-          </Flex>
-          <Text as="h3" fontSize="md">
-            All Projects
-          </Text>
-        </Flex>
-        <Grid gridTemplateRows="repeat(3, 1fr)" columnGap={16} rowGap={16}>
-          {projects.map(el => {
-            return (
-              <div key={el.name}>
-                <Box>
-                  <Link
-                    href={el.link}
-                    _hover={{
-                      color: "purple.600",
-                      textDecoration: "underline",
-                    }}
-                    lineHeight="none"
-                    fontSize="2xl"
-                    fontWeight="bold"
-                  >
-                    {el.name}
-                  </Link>
+      <Box id="projects" mt={32} mb={6}>
+        <Grid mt={6} gridTemplateColumns="1fr 1fr" gridColumnGap="16">
+          {projects.map(proj => {
+            const { name, description, link } = proj
 
-                  <Text mt={3}>{el.description}</Text>
+            return (
+              <div>
+                <Box key={name}>
+                  <PseudoBox
+                    cursor="pointer"
+                    transition="0.38s all ease"
+                    mb={3}
+                    p="6"
+                    pl="1"
+                    _hover={{
+                      bg: "purple.500",
+                      color: "white",
+                    }}
+                    rounded="lg"
+                  >
+                    <Heading
+                      fontSize={["md", "lg", "xl", "xl"]}
+                      fontWeight="500"
+                    >
+                      {name}
+                    </Heading>
+                  </PseudoBox>
                 </Box>
               </div>
             )

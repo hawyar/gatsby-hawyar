@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout/Layout"
-import { Heading, Text, Box, Button, Image, Flex } from "@chakra-ui/core"
+import { Heading, Text, Box, Button, Image, Flex, Link } from "@chakra-ui/core"
 const About = () => {
   return (
     <div>
@@ -12,20 +12,17 @@ const About = () => {
           <Box width={["100%", "50%"]}>
             <Box>
               <Text>
-                Hey! I am Hawyar Farooq, a 20 year-old Software Engineer from
-                the beautiful Kurdistan. Currently, pursuing a B.S in Software
-                Engineer in the U.S. My programming background is derived from
-                however in the last two years I have branched out to web
-                development mainly developing websites using React js.
+                Hey! I am Hawyar Farooq, 20 year-old Software Engineer from
+                beautiful Kurdistan. I actauuly .First I started doing super{" "}
+                <Link>cool animations</Link>with After Effects. Back then
               </Text>
 
               <Text mt={6}>
                 {" "}
-                Hey! I am Hawyar Farooq, a 20 year-old Software Engineer from
-                the beautiful country of Kurdistan. Currently, pursuing a B.S in
-                Software Engineer in the U.S. My programming background is
-                derived from however in the last two years I have branched out
-                to web development mainly developing websites using React js.
+                Back in my Kurdistan I was working with the great team of kitn.
+                As part of their video team I was mainly in charge of making
+                short aniated videos. While working on those videos it was
+                getting really challenging.
               </Text>
             </Box>
             <Button
