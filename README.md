@@ -28,12 +28,6 @@ Open http://localhost:8000
 
 Open http://localhost:8000/___graphql for GraphiQL
 
-## Blog
-
-The blog sections is powered by [MDX](https://mdxjs.com/) which is basically [Markdown](https://daringfireball.net/projects/markdown/syntax) on steriods. It allows writing jsx in your markdown 🤯. This allows customizable posts as we can include react components within out markdown.
-
-The mdx files are located in `content/blog`, each posts in its own folder.
-
 ### Creating Pages
 
 Gatsby's docs call this process **Programmatically** Creating Pages. Looking at the code is easier to understand what is happening.
@@ -47,26 +41,6 @@ And to do that we have to use Gatsby's Node API to create the nodes and generate
 Head over to `gatsby-node.js`
 
 For each blog posts, using Gatsby's Node API we dynamically generate slugs based on the file path.
-
-### Frontmatter
-
-The frontmatter holds information relevant to the post.
-
-```md
----
-title: Hello World
-slug: blog-one
-date: 2020-05-28
-excerpt: Gatsby is awesome
-published: true
----
-
-// some markdown here
-```
-
-The example above shows every detail for our posts and. These feilds allows us to sort our posts by date or filter them by their published statis.
-
-See `src/pages/index.js` to see how we use the fields above in our query.
 
 ## Styling
 
