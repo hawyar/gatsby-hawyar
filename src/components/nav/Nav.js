@@ -45,7 +45,7 @@ const Nav = () => {
                 rounded="md"
                 color={secretLinkMode[colorMode]}
               >
-                Secret
+                Dribbble
               </Link>
             </div>
 

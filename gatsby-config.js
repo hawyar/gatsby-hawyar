@@ -18,6 +18,12 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sitemap`,
     {
+      resolve: "gatsby-plugin-netlify-cache",
+      options: {
+        cachePublic: true,
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: process.env.GOOGLE_ANALYTICS,

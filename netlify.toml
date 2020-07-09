@@ -8,3 +8,6 @@ package = "@netlify/plugin-lighthouse"
     best-practices = 0.9
     seo = 0.9
     pwa = 0.9
+
+
+    
