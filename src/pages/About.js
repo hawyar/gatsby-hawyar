@@ -12,29 +12,32 @@ const About = () => {
           <Box width={["100%", "50%"]}>
             <Box>
               <Text>
-                Hey! I am Hawyar Farooq, 20 year-old Software Engineer from
-                beautiful Kurdistan. I actauuly .First I started doing super{" "}
-                <Link>cool animations</Link>with After Effects. Back then
+                Hey! I am Hawyar a software engineer from beautiful Kurdistan. I
+                was lived in Kurdistan until 2017. After graduating high school
+                in Kurdistan, I moved to the U.S. to pursue Bachelor's degree at{" "}
+                <Link href="https://www.manchester.edu/">
+                  Manchester University
+                </Link>{" "}
+                with a major in Software Engineering.
               </Text>
 
               <Text mt={6}>
                 {" "}
-                Back in my Kurdistan I was working with the great team of kitn.
-                As part of their video team I was mainly in charge of making
-                short aniated videos. While working on those videos it was
-                getting really challenging.
+                My first lines of code was actually to make animations in After
+                Effects. Before After Effects supported Right to Left text I
+                used to write expressions to be able to do certain animations.
               </Text>
             </Box>
             <Button
               as="a"
-              href="/"
+              href="https://calendly.com/hawyarfa/15min"
               mt={12}
               size="lg"
               fontSize="md"
               mb={["6", "0"]}
             >
               {" "}
-              Let's Chat
+              Let's have a quick chat
             </Button>
           </Box>
           <Image

@@ -61,7 +61,7 @@ const Home = () => {
             )
           })}
         </Box>
-        <Projects />
+        {/* <Projects /> */}
       </Layout>
     </div>
   )
