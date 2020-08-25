@@ -1,21 +1,18 @@
 exports.createPages = async ({ graphql, actions: { createPage } }) => {
-  const {
-    data: {
-      gcms: { posts },
-    },
-  } = await graphql(`
+  const { data } = await graphql(`
     {
-      gcms {
-        posts(stage: PUBLISHED) {
-          id
-          slug
-          title
+      posts: allGraphCmsPost(limit: 10) {
+        edges {
+          node {
+            slug
+            id
+          }
         }
       }
     }
   `)
 
-  posts.forEach(({ id, slug }, index) => {
+  data.posts.edges.forEach(({ id, slug }, index) => {
     const prev = index === posts.length - 1 ? null : posts[index + 1]
     const next = index === 0 ? null : posts[index - 1]
 

@@ -1,0 +1,17 @@
+fragment Project on Project {
+  stage
+  remoteId: id
+  createdAt
+  updatedAt
+  publishedAt
+  name
+  excerpt
+  content {
+    ... on RichText {
+      raw
+      html
+      markdown
+      text
+    }
+  }
+}

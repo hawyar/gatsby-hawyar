@@ -3,13 +3,13 @@ import {
   Box,
   Link,
   Flex,
-  useColorMode,
-  IconButton,
+  // useColorMode,
+  // IconButton,
   Divider,
 } from "@chakra-ui/core"
+import { Link as GatsbyLink } from "gatsby"
 const Nav = () => {
-  const { colorMode, toggleColorMode } = useColorMode()
-  const secretLinkMode = { light: "white", dark: "purple.400" }
+  // const { colorMode, toggleColorMode } = useColorMode()
   return (
     <div>
       <Box>
@@ -17,8 +17,9 @@ const Nav = () => {
           <Flex justify="space-between" align="center">
             <div>
               <Link
+                as={GatsbyLink}
                 fontSize="md"
-                href="/about"
+                to="/about"
                 p="2"
                 rounded="md"
                 _hover={{ bg: "gray.300", color: "black" }}
@@ -43,18 +44,17 @@ const Nav = () => {
                 _hover={{ bg: "gray.300", color: "black" }}
                 p="2"
                 rounded="md"
-                color={secretLinkMode[colorMode]}
               >
                 Dribbble
               </Link>
             </div>
 
-            <IconButton
+            {/* <IconButton
               bg="transparent"
               onClick={toggleColorMode}
               aria-label="Color mode"
               icon={colorMode === "light" ? "moon" : "sun"}
-            />
+            /> */}
           </Flex>
           <Divider mt={4} />
         </Box>

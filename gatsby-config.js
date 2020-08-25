@@ -1,6 +1,6 @@
-if (process.env.NODE_ENV !== "production") {
-  require("dotenv").config()
-}
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 module.exports = {
   siteMetadata: {
@@ -9,7 +9,7 @@ module.exports = {
     owner: "Hawyar Farooq",
     url: `https://www.hawyar.com`,
     siteUrl: `https://www.hawyar.com`,
-    titleTemplate: "%s · The Real Hero",
+    titleTemplate: "%s · Hawyar",
     description: `Hawyar's personal website`,
     twitterUsername: `@HawyarFarooq`,
     image: `/src/assets/images/selfImg.png`,
@@ -48,57 +48,23 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-mdx`,
+      resolve: "gatsby-source-graphcms",
       options: {
-        extensions: [".mdx"],
-        plugins: [`gatsby-remark-images`],
-        gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 1200,
-            },
-          },
-        ],
-      },
-    },
-    {
-      resolve: "gatsby-source-graphql",
-      options: {
-        // The top level query type, can be anything you want!
-        typeName: "GCMS",
-        // The field you'll query against, can also be anything you want.
-        fieldName: "gcms",
-        // Your API endpoint, available from the dashboard and settings window.
-        // You can use this endpoint that features US mountains for now.
-        url:
-          process.env.GCMS_KEY ||
-          "https://api-us-east-1.graphcms.com/v2/ckc9atklc09yk01za058ieq59/master",
-      },
-    },
-
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `posts`,
-        path: `${__dirname}/content/blog/`,
+        endpoint: process.env.GRAPHCMS_ENDPOINT,
+        downloadLocalImages: true,
+        // converts rich text to markdown nodes
+        // buildMarkdownNodes: true,
       },
     },
 
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`Rubik`],
-        display: "swap",
-      },
-    },
+
     {
       resolve: "gatsby-plugin-chakra-ui",
       options: {
         isResettingCSS: true,
-        isUsingColorMode: true,
+        // isUsingColorMode: true,  // fix style flash on refresh
       },
     },
   ],

@@ -1,4 +1,5 @@
 const React = require("react")
+require("typeface-cooper-hewitt")
 
 const {
   ThemeProvider,
@@ -7,11 +8,7 @@ const {
   CSSReset,
 } = require("@chakra-ui/core")
 
-// const customTheme = require("./")
-
-exports.wrapPageElement = ({ element, props }) => {
-  // props provide same data to Layout as Page element will get
-  // including location, data, etc - you don't need to pass it
+exports.wrapPageElement = ({ element }) => {
   return (
     <ThemeProvider theme={theme}>
       <CSSReset />

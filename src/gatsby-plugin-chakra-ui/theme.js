@@ -1,5 +1,6 @@
 import { theme } from "@chakra-ui/core"
 
+//extends chakra's base theme
 const customTheme = {
   ...theme,
   colors: {
@@ -12,8 +13,8 @@ const customTheme = {
     },
   },
   fonts: {
-    body: "Inter, sans-serif",
-    heading: "Inter, sans-serif",
+    body: "Cooper Hewitt, sans-serif",
+    heading: "Cooper Hewitt, sans-serif",
     mono: "Menlo, monospace",
   },
 }

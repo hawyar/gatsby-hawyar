@@ -78,20 +78,27 @@ const BlogPostTemplate = ({
 export default BlogPostTemplate
 
 export const pageQuery = graphql`
-  query PostPageQuery($id: ID!) {
-    gcms {
-      post(where: { id: $id }) {
-        title
-        date
-        slug
-        excerpt
-        content {
-          html
-          raw
-          markdown
-        }
-        coverImage {
-          url(transformation: { image: { resize: { height: 490 } } })
+  query postQuery($id: ID!) {
+    allGraphCmsPost(limit: 10) {
+      edges {
+        node {
+          date
+          slug
+          title
+          publishedAt
+          tags
+          id
+          coverImage {
+            width
+            localFile {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+          }
+          createdAt
         }
       }
     }

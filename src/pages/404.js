@@ -1,9 +1,8 @@
 import React from "react"
-// finish 404 page design
 const Four0Four = () => {
   return (
     <div>
-      <p>Four' Four</p>
+      <p>Four'0 Four</p>
     </div>
   )
 }
